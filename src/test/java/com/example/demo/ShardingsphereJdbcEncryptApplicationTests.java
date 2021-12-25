@@ -24,12 +24,13 @@ class ShardingsphereJdbcEncryptApplicationTests {
             .userId(i)
             .userName("test_mybatis_" + i)
             .pwd("pwd_mybatis_" + i)
+//            .pwdCipher("pwd_mybatis_" + i)
             .build();
         System.out.println(user);
         userMapper.insertUser(user);
     }
 
-    @Test
+//    @Test
     void getUserInfo() {
         List<User> list = userMapper.getUserInfo("test_mybatis_717", "pwd_mybatis_717");
         if(list != null && list.size() > 0){

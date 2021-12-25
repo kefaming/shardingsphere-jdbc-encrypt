@@ -16,6 +16,8 @@ public class User implements Serializable {
 
     private String pwd;
 
+//    private String pwdCipher;
+
 
 //    @Override
 //    public String toString() {

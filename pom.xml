@@ -9,15 +9,16 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>shardingsphere-jdbc-encrypt</artifactId>
+    <artifactId>shardingsphere-encrypt-boot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>shardingsphere-jdbc-encrypt</name>
+    <name>shardingsphere-encrypt-boot</name>
     <description>Demo project for Spring Boot</description>
 
 
     <properties>
         <java.version>1.8</java.version>
         <shardingsphere.version>5.0.0-RC1-SNAPSHOT</shardingsphere.version>
+<!--        <shardingsphere.version>5.0.0-alpha</shardingsphere.version>-->
         <mybatis.version>3.5.1</mybatis.version>
         <mybatis-spring.version>2.0.1</mybatis-spring.version>
         <hikari-cp.version>3.4.2</hikari-cp.version>
@@ -32,31 +33,23 @@
             <version>1.2.3</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>shardingsphere-sharding-core</artifactId>
-            <version>${shardingsphere.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>shardingsphere-encrypt-core</artifactId>
-            <version>${shardingsphere.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>shardingsphere-jdbc-core</artifactId>
-            <version>${shardingsphere.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
-            <version>${shardingsphere.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>shardingsphere-jdbc-core-spring-namespace</artifactId>
-            <version>${shardingsphere.version}</version>
-        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-encrypt-core</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-jdbc-core</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-jdbc-core-spring-namespace</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.zaxxer</groupId>
@@ -140,17 +133,45 @@
             <version>5.1.35</version>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-spi</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-spi</artifactId>
+            <version>${shardingsphere.version}</version>
+<!--            <scope>compile</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-sharding-core</artifactId>
+            <version>${shardingsphere.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+            <version>${shardingsphere.version}</version>
+        </dependency>
 
+        <!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>encrypt-core-common</artifactId>-->
+<!--            <version>5.0.0-RC1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
-
-
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-infra</artifactId>-->
+<!--            <version>5.0.0-RC1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
-
-
     <build>
-        <finalName>shardingsphere-jdbc-encrypt</finalName>
+        <finalName>shardingsphere-encrypt-boot</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -1,1 +1,0 @@
-# shardingsphere-jdbc-encrypt
